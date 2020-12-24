@@ -96,26 +96,6 @@ const App = () => {
 		}
 	}
 
-	topUsers = [
-		{ user_id: 213213,
-		  info: {
-			photo_200: '',
-			first_name: 'aaa',
-			last_name: 'sdsdsd'
-			
-		  }
-		},
-		{ user_id: 213213,
-		  info: {
-			photo_200: '',
-			first_name: 'aaa',
-			last_name: 'sdsdsd'
-			
-		  }
-		}
-	  ]
-	
-
 	return (
 		<View activePanel={activePanel} popout={popout}>
 			<Home id='home' fetchedUser={fetchedUser}  go={go} userScore={userScore} topUsers={topUsers} comments={comments}/>
