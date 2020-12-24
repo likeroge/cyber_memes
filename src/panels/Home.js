@@ -40,7 +40,7 @@ const Home = ({ id, go, fetchedUser, userScore, topUsers }) => (
       </Group>
     )}
       {
-        (topUsers && topUsers.length > 1) ?  <Group title="Rating">
+        (!topUsers && topUsers.length <= 1) ?  <Group title="Rating">
         <Cell>
           <h1>Топ 10 пользователей:</h1>
   
