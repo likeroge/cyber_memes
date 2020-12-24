@@ -41,12 +41,12 @@ const Home = ({ id, go, fetchedUser, userScore, topUsers }) => (
       </Group>
     )}
       {
-        (!topUsers ) ?  <Group title="Rating">
+        (2===2 ) ?  <Group title="Rating">
         <Cell>
           <h1>Топ 10 пользователей:</h1>
   
               {
-                topUsers.map((u)=>{
+                [].map((u)=>{
                   return (
                     <Cell before={u.info.photo_200? (<Avatar src={u.info.photo_200}/>): null } description={u.info.first_name} key={u.userID}>
                      <span>{u.info.first_name} {u.info.last_name}</span> 
