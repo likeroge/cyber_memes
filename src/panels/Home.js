@@ -40,7 +40,7 @@ const Home = ({ id, go, fetchedUser, userScore, topUsers }) => (
       </Group>
     )}
       {
-        topUsers.length > 1 ?  <Group title="Rating">
+        (topUsers && topUsers.length > 1) ?  <Group title="Rating">
         <Cell>
           <h1>Топ 10 пользователей:</h1>
   
@@ -57,7 +57,7 @@ const Home = ({ id, go, fetchedUser, userScore, topUsers }) => (
               }
         </Cell>
       </Group> 
-      : <h2>Хорошая новость - ты первый в рейтинге! И единственный...</h2>
+      : <Cell> <h2>Хорошая новость - ты первый в рейтинге! И единственный...</h2></Cell>
       }
    
 
