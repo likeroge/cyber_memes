@@ -49,15 +49,16 @@ const Home = ({ id, go, fetchedUser, userScore, topUsers }) => (
                   return (
                     <Cell before={u.info.photo_200? (<Avatar src={u.info.photo_200}/>): null } description={u.info.first_name} key={u.userID}>
                      <span>{u.info.first_name} {u.info.last_name}</span> 
-  
-                   
                     </Cell>
                   )
                 })
               }
         </Cell>
       </Group> 
-      : <Cell> <h2>Хорошая новость - ты первый в рейтинге! И единственный...</h2></Cell>
+      : <Cell> <h2>Хорошая новость {fetchedUser.first_name} - ты первый в рейтинге! </h2>
+                <p>И единственный...</p>
+              
+      </Cell>
       }
    
 
