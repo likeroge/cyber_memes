@@ -39,24 +39,27 @@ const Home = ({ id, go, fetchedUser, userScore, topUsers }) => (
         </Cell>
       </Group>
     )}
-
-    <Group title="Rating">
-      <Cell>
-        <h1>Топ 10 пользователей:</h1>
-
-            {
-              topUsers.map((u)=>{
-                return (
-                  <Cell before={u.info.photo_200? (<Avatar src={u.info.photo_200}/>): null } description={u.info.first_name} key={u.userID}>
-                   <span>{u.info.first_name} {u.info.last_name}</span> 
-
-                 
-                  </Cell>
-                )
-              })
-            }
-      </Cell>
-    </Group>
+      {
+        topUsers.length > 1 ?  <Group title="Rating">
+        <Cell>
+          <h1>Топ 10 пользователей:</h1>
+  
+              {
+                topUsers.map((u)=>{
+                  return (
+                    <Cell before={u.info.photo_200? (<Avatar src={u.info.photo_200}/>): null } description={u.info.first_name} key={u.userID}>
+                     <span>{u.info.first_name} {u.info.last_name}</span> 
+  
+                   
+                    </Cell>
+                  )
+                })
+              }
+        </Cell>
+      </Group> 
+      : <h2>Хорошая новость {fetchedUser.first_name} - ты первый в рейтинге! И единственный...</h2>
+      }
+   
 
     <Group title="Navigation">
       <Div>
