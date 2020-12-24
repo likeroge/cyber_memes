@@ -5,12 +5,13 @@ import Group from "@vkontakte/vkui/dist/components/Group/Group";
 import Div from "@vkontakte/vkui/dist/components/Div/Div";
 import Button from "@vkontakte/vkui/dist/components/Button/Button";
 
-const Second = ({ id, go, coins }) => {
+
+const Second = ({ id, go, userScore, bridge, STORAGE }) => {
   const content1 = "Контент 1";
   const content2 = "Контент 2";
   let contentText = content1;
 
-  if (coins === 3) {
+  if (userScore >= 3) {
     contentText = content2;
   }
 
@@ -22,6 +23,7 @@ const Second = ({ id, go, coins }) => {
           <Button size="xl" onClick={go} data-to="home">
             Домой
           </Button>
+          
           {contentText === content2 && (
             <Button
               size="xl"

@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Panel from "@vkontakte/vkui/dist/components/Panel/Panel";
 import PanelHeader from "@vkontakte/vkui/dist/components/PanelHeader/PanelHeader";
 import Button from "@vkontakte/vkui/dist/components/Button/Button";
@@ -9,7 +8,9 @@ import Div from "@vkontakte/vkui/dist/components/Div/Div";
 import Avatar from "@vkontakte/vkui/dist/components/Avatar/Avatar";
 import Icon28FavoriteCircleFillYellow from "@vkontakte/icons/dist/28/favorite_circle_fill_yellow";
 
-const Home = ({ id, go, fetchedUser }) => (
+const Home = ({ id, go, fetchedUser, userScore, topUsers }) => (
+
+
   <Panel id={id}>
     <PanelHeader>CyberMemes</PanelHeader>
     {fetchedUser && (
@@ -17,7 +18,7 @@ const Home = ({ id, go, fetchedUser }) => (
         <Cell
           before={
             fetchedUser.photo_200 ? (
-              <Avatar src={fetchedUser.photo_200} />
+              <Avatar  src={fetchedUser.photo_200} />
             ) : null
           }
           description={
@@ -32,7 +33,7 @@ const Home = ({ id, go, fetchedUser }) => (
         <Cell title="User Coins">
           <h1>Личный счет:</h1>
           <Div style={{ display: "flex", alignItems: "center"}}>
-            <h4 style={{}}>12312 </h4>
+            <h4> {userScore} </h4>
             <Icon28FavoriteCircleFillYellow style={{marginLeft: '1rem'}} />
           </Div>
         </Cell>
@@ -42,6 +43,18 @@ const Home = ({ id, go, fetchedUser }) => (
     <Group title="Rating">
       <Cell>
         <h1>Топ 10 пользователей:</h1>
+
+            {
+              topUsers.map((u)=>{
+                return (
+                  <Cell before={u.info.photo_200? (<Avatar src={u.info.photo_200}/>): null } description={u.info.first_name} key={u.userID}>
+                   <span>{u.info.first_name} {u.info.last_name}</span> 
+
+                 
+                  </Cell>
+                )
+              })
+            }
       </Cell>
     </Group>
 
@@ -54,18 +67,5 @@ const Home = ({ id, go, fetchedUser }) => (
     </Group>
   </Panel>
 );
-
-Home.propTypes = {
-  id: PropTypes.string.isRequired,
-  go: PropTypes.func.isRequired,
-  fetchedUser: PropTypes.shape({
-    photo_200: PropTypes.string,
-    first_name: PropTypes.string,
-    last_name: PropTypes.string,
-    city: PropTypes.shape({
-      title: PropTypes.string,
-    }),
-  }),
-};
 
 export default Home;
