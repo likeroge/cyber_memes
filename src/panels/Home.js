@@ -10,6 +10,7 @@ import Icon28FavoriteCircleFillYellow from "@vkontakte/icons/dist/28/favorite_ci
 
 const Home = ({ id, go, fetchedUser, userScore, topUsers }) => (
 
+  
 
   <Panel id={id}>
     <PanelHeader>CyberMemes</PanelHeader>
@@ -40,7 +41,7 @@ const Home = ({ id, go, fetchedUser, userScore, topUsers }) => (
       </Group>
     )}
       {
-        (!topUsers && topUsers.length <= 1) ?  <Group title="Rating">
+        (topUsers && topUsers.length >1) ?  <Group title="Rating">
         <Cell>
           <h1>Топ 10 пользователей:</h1>
   

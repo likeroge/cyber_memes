@@ -95,6 +95,25 @@ const App = () => {
 			console.log(error)
 		}
 	}
+
+	topUsers = [
+		{ user_id: 213213,
+		  info: {
+			photo_200: '',
+			first_name: 'aaa',
+			last_name: 'sdsdsd'
+			
+		  }
+		},
+		{ user_id: 213213,
+		  info: {
+			photo_200: '',
+			first_name: 'aaa',
+			last_name: 'sdsdsd'
+			
+		  }
+		}
+	  ]
 	
 
 	return (
