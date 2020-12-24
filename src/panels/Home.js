@@ -57,7 +57,7 @@ const Home = ({ id, go, fetchedUser, userScore, topUsers }) => (
               }
         </Cell>
       </Group> 
-      : <h2>Хорошая новость {fetchedUser.first_name} - ты первый в рейтинге! И единственный...</h2>
+      : <h2>Хорошая новость {`${fetchedUser.first_name}`} - ты первый в рейтинге! И единственный...</h2>
       }
    
 
