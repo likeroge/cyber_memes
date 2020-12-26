@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/CyberMemes/static/js/main.331d35df.chunk.js",
+    "main.js.map": "/CyberMemes/static/js/main.331d35df.chunk.js.map",
+    "runtime-main.js": "/CyberMemes/static/js/runtime-main.c44f6633.js",
+    "runtime-main.js.map": "/CyberMemes/static/js/runtime-main.c44f6633.js.map",
+    "static/css/2.cdee455b.chunk.css": "/CyberMemes/static/css/2.cdee455b.chunk.css",
+    "static/js/2.df83d880.chunk.js": "/CyberMemes/static/js/2.df83d880.chunk.js",
+    "static/js/2.df83d880.chunk.js.map": "/CyberMemes/static/js/2.df83d880.chunk.js.map",
+    "index.html": "/CyberMemes/index.html",
+    "precache-manifest.060f6da29f4674f205e92559e15bf40f.js": "/CyberMemes/precache-manifest.060f6da29f4674f205e92559e15bf40f.js",
+    "service-worker.js": "/CyberMemes/service-worker.js",
+    "static/css/2.cdee455b.chunk.css.map": "/CyberMemes/static/css/2.cdee455b.chunk.css.map",
+    "static/js/2.df83d880.chunk.js.LICENSE.txt": "/CyberMemes/static/js/2.df83d880.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c44f6633.js",
+    "static/css/2.cdee455b.chunk.css",
+    "static/js/2.df83d880.chunk.js",
+    "static/js/main.331d35df.chunk.js"
+  ]
+}
