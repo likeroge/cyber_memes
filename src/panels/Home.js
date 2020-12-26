@@ -10,8 +10,6 @@ import Icon28FavoriteCircleFillYellow from "@vkontakte/icons/dist/28/favorite_ci
 
 const Home = ({ id, go, fetchedUser, userScore, topUsers }) => (
 
-  
-
   <Panel id={id}>
     <PanelHeader>CyberMemes</PanelHeader>
     {fetchedUser && (
@@ -40,27 +38,29 @@ const Home = ({ id, go, fetchedUser, userScore, topUsers }) => (
         </Cell>
       </Group>
     )}
-      {
-        (topUsers && topUsers.length > 1) ?  <Group title="Rating">
-        <Cell>
-          <h1>Топ 10 пользователей:</h1>
-  
-              {
-                topUsers.map((u)=>{
-                  return (
-                    <Cell before={u.info.photo_200? (<Avatar src={u.info.photo_200}/>): null } description={u.info.first_name} key={u.userID}>
-                     <span>{u.info.first_name} {u.info.last_name}</span> 
-                    </Cell>
-                  )
-                })
-              }
-        </Cell>
+      
+          <Group title="Rating">
+          {
+            (topUsers && topUsers.length > 1) ? 
+            <Cell>
+            <h1>Топ 10 пользователей:</h1>
+    
+                {
+                  topUsers.map((u)=>{
+                    return (
+                      <Cell before={u.info.photo_200? (<Avatar src={u.info.photo_200}/>): null } description={u.info.first_name} key={u.userID}>
+                       <span>{u.info.first_name} {u.info.last_name}</span> 
+                      </Cell>
+                    )
+                  })
+                }
+          </Cell>
+          :
+          <Cell><h3>Ты лучший! Пока...</h3></Cell>
+          }
       </Group> 
-      : <Cell> <h3>Хорошая новость - ты первый в рейтинге! </h3>
-                <p>И единственный...</p>
-              
-      </Cell>
-      }
+  
+      
    
 
     <Group title="Navigation">

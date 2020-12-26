@@ -58,7 +58,7 @@ const App = () => {
 				}
 			} )
 			try {
-				const commentsData = await axios.get('https://airdis.ru/api/v1/getUsersData/') || []
+				const commentsData = await axios.get('https://f92fc6e9415d.ngrok.io/api/v1/getUsersData/') || []
 				const userScore = await commentsData.data.filter(c=>c.userID===user.id)[0].comments.length ||0
 				
 				const topArray = await commentsData.data.sort((a,b)=>{
