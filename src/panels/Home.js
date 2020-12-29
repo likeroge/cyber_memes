@@ -42,7 +42,6 @@ const Home = ({ id, go, fetchedUser, userScore, topUsers }) => (
           <Group title="Rating">
             
           {
-            //сколько комментаторов?
             (topUsers && topUsers.length > 1) ? 
             <Cell>
             <h1>Топ 10 пользователей:</h1>
