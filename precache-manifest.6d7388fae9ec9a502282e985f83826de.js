@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2761c2f409406298e556727c9774a052",
+    "revision": "53241f80e47c68987e736c300048566d",
     "url": "/cyber_memes/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cyber_memes/static/js/2.0c5667cf.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8d092f06ad1735eeacae",
-    "url": "/cyber_memes/static/js/main.aa2ca409.chunk.js"
+    "revision": "b5bbca03b7e98576145e",
+    "url": "/cyber_memes/static/js/main.c3cc41dd.chunk.js"
   },
   {
     "revision": "6c4020cd1f65db75e7e5",
